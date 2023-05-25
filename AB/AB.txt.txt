@@ -1,5 +1,6 @@
 jre jgrnjeb
 
+create remote repostory to gthub
 go to the dr
 git init
 
