@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+
+        <input type="submit" value="Register" onclick="return validateRegistration()">
+    </form>
+
+    <script>
+        function validateRegistration() {
+            // Get input values
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validate username, email, password, and confirm password
+            if (username === '') {
+                alert('Please enter a username.');
+                return false;
+            }
+
+            if (email === '') {
+                alert('Please enter an email address.');
+                return false;
+            }
+
+            // Check if email is valid using a regular expression
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            if (password === '') {
+                alert('Please enter a password.');
+                return false;
+            }
+
+            if (confirmPassword === '') {
+                alert('Please confirm your password.');
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return false;
+            }
+
+            // If all validations pass, registration successful
+            alert('Registration successful!');
+            return true;
+        }
+    </script>
+</body>
+
+</html>
