@@ -1,1 +1,16 @@
 jre jgrnjeb
+
+go to the dr
+git init
+
+git add .
+git status
+git commit -m 'change1'
+ git remote add origin https://github.com/amitrtm.git
+git push -u origin master
+
+amitrbhagat
+github@2022
+
+amitrbhagat6789@gmail.com
+github@9322
