@@ -15,3 +15,10 @@ app.get("/", function (req, res) {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+mkdir static-website
+cd static-website
+
+npm init -y
+npm install express
+node server.js
